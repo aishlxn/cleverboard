@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Zk1dJLaAeC_3nRMMLPD8VKaWz_TYYmG1DQ&s" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}" />
+
+
+    <title>CleverBoard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-4">
+        <h1 class="mcqs-title">Test Your Knowledge</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-4" id="mcqs-container">
+        {% for index, mcq in mcqs %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Q{{ index }}: {{ mcq[0] }}</h5>
+                    <form>
+                        {% set options = ['A', 'B', 'C', 'D'] %}
+                        {% set num_choices = mcq[1]|length %}
+                        {% for choice_index in range(num_choices) %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answer{{ index }}" id="choice{{ index }}{{ choice_index }}" value="{{ choice_index }}">
+                                <label class="form-check-label" for="choice{{ index }}{{ choice_index }}">
+                                    {{ options[choice_index] }}: {{ mcq[1][choice_index] }}
+                                </label>
+                            </div>
+                        {% endfor %}
+                    </form>
+                    <small class="text-muted correct-answer" style="display: none;">Correct Answer: {{ mcq[2] }}</small>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Show Results Button -->
+        <div class="text-center">
+            <button id="show-results-btn" class="btn btn-primary">Show Results</button>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+    <a href="{{ url_for('dashboard') }}" class="btn btn-success">Back to Dashboard</a>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('show-results-btn').addEventListener('click', function() {
+            // Show all correct answers
+            var correctAnswers = document.getElementsByClassName('correct-answer');
+            for (var i = 0; i < correctAnswers.length; i++) {
+                correctAnswers[i].style.display = 'block';
+            }
+            // Hide the button after showing results
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

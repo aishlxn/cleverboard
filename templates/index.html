@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Zk1dJLaAeC_3nRMMLPD8VKaWz_TYYmG1DQ&s" type="image/x-icon">
+    <title>CleverBoard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#" class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Zk1dJLaAeC_3nRMMLPD8VKaWz_TYYmG1DQ&s" alt="Logo">
+            QuizElevate
+        </a>
+        <div class="navbar-links">
+            <a href="{{ url_for('welcome') }}">Welcome</a>
+
+        </div>
+    </div>
+    <div class="headline">
+        <h1>CleverBoard</h1>
+        <h2>Where learning gets interactive!</h2>
+    </div>
+
+    <div class="container">
+        <p class="lead"><b>This application effortlessly generates multiple-choice questions (MCQs) from the provided text. You can upload either a PDF or TXT file for processing.</b></p>
+        
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload File(s) (PDF or TXT)</label>
+                <input type="file" class="form-control-file" id="file" name="files[]" multiple>
+            </div>
+            
+            <div class="form-group">
+                <label for="num_questions">Number of Questions:</label>
+                <select class="form-control" id="num_questions" name="num_questions">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-block">Generate Questions</button>
+        </form>
+    </div>
+
+    <footer>
+    </footer>
+
+</body>
+</html>

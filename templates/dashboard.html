@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - CleverBoard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center min-vh-100" style="background-color: #1a2b4c;">
+        <h1 style="color: #FFFFFF;">Welcome, {{ user.username }}!</h1>
+        <p class="lead" style="color: #FFFFFF;" >This is your dashboard.</p>
+        <a href="{{ url_for('index') }}" class="btn btn-success mt-3">Start Generating Quiz</a>
+        <a href="{{ url_for('task_manager') }}" class="btn btn-info mt-3">Open Task Manager</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-danger mt-3 ml-2">Logout</a>
+    </div>
+</body>
+</html>
