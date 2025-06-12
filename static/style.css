@@ -1,0 +1,137 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    width: 100%;      
+    margin: 0;        
+    position: relative;
+    z-index: 1000;
+  }
+  
+.navbar {
+    background-color: #060061; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.navbar .navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-links a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-left: 20px;
+    transition: background 0.3s ease;
+}
+
+.navbar .navbar-links a:hover {
+    background-color: #1a2b4c; 
+    border-radius: 5px;
+}
+
+.headline {
+    text-align: center;
+    padding: 10px 10px; 
+    background: #060061;
+  }
+  
+.headline h1 {
+    color: #aeaeb4;
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 600;
+  }
+  
+.headline h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.lead {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+.form-group label {
+    font-weight: 600;
+    color: #060061;
+  }
+  
+.form-control-file {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+  }
+  
+.form-control:focus {
+    border-color: #060061;
+  }
+  
+button.btn {
+    background-color: #060061 !important;  
+    color: white !important;               
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;  
+  }
+  
+button.btn:hover {
+    background-color: #060061  !important;  
+    color: white !important;              
+  }
+  
+footer {
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    background-color: #060061;
+    color: white;
+    margin-top: 40px;
+  }

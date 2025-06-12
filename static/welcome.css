@@ -1,1 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://img.freepik.com/free-vector/gradient-connection-background_23-2150462053.jpg?semt=ais_hybrid') no-repeat center center fixed; 
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden; 
+}
 
+.navbar {
+    background-color: #050322; 
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.navbar .navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-links a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-left: 20px;
+    transition: background 0.3s ease;
+}
+
+.navbar .navbar-links a:hover {
+    background-color: #1a2b4c; 
+    border-radius: 5px;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px; 
+    flex-direction: row;
+    padding: 20px; 
+    text-align: center;
+    margin-top: 60px; 
+    box-sizing: border-box;
+    max-width: 1200px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.welcome-text {
+    flex: 1;
+    margin-right: 30px;
+    max-width: 600px;
+}
+
+.welcome-text h1 {
+    font-style: italic;
+    font-size: 3em;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.welcome-text p {
+    font-style: italic;
+    font-size: 1.3em;
+    color: #b0b0b0; 
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.welcome-text .btn {
+    background: #1a2b4c;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.welcome-text .btn:hover {
+    background: #3a5f8d;
+    transform: scale(1.05);
+    margin-bottom: 20px;
+}
+
+.welcome-image {
+    flex: 1;
+    max-width: 500px
+
+}
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .welcome-container {
+        flex-direction: column;
+        text-align: center;
+        height: auto; 
+        padding: 20px;
+    }
+
+    .navbar .navbar-links a {
+        margin-left: 10px;
+        padding: 8px 15px;
+    }
+
+    .welcome-image img {
+        width: 100%;
+        height: auto;
+    }
+}

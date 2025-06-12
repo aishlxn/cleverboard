@@ -1,0 +1,77 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://img.freepik.com/free-vector/gradient-connection-background_23-2150462050.jpg?t=st=1733846172~exp=1733849772~hmac=be683b3d4201ebaf47baa64e21f1e6b6fc68a0cecfce2e1d0c65c98f04b64dc7&w=740') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+}
+
+.mcqs-title {
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold; 
+    font-size: 32px; 
+    text-align: center; 
+    text-shadow: 2px 2px 4px rgb(255, 255, 255); 
+  }
+  
+  
+.container {
+    text-align: left;
+    margin: 5% auto;
+    background: linear-gradient(135deg, #394867 0%, #4E597C 100%);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+.correct-answer {
+    display: none;
+    color: #FFD700; 
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+.btn {
+    border-radius: 25px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #3B4A76 0%, #556A96 100%);
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+  }
+  
+.btn:hover {
+    background: linear-gradient(135deg, #4D638C 0%, #6779A6 100%);
+    transform: scale(1.05);
+  }
+  
+.card-mb-3 {
+    background: transparent;
+  }
+  
+.headline {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+  }
+  
+.correct-answer {
+    color: #FFD700;
+    font-weight: bold;
+    display: none;
+  }
+  
+.form-check-label {
+    color: #31394b;
+    font-size: 16px;
+  }
+  
+.form-check-input {
+    margin-right: 10px;
+  }
